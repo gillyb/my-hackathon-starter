@@ -21,5 +21,5 @@ module.exports = {
     stats: {
         colors: true
     },
-    devtool: 'source-map'
+    devtool: 'inline-source-map'    // TODO: remove this for production builds
 };

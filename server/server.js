@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const publicRootDir = path.join(__dirname, '../public');
+const publicBuildDir = path.join(__dirname, '../build');
 
 app.disable('x-powered-by');
 
@@ -19,9 +20,9 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.use(express.static(publicRootDir + '/scripts'));
 app.use(express.static(publicRootDir + '/css'));
 app.use(express.static(publicRootDir + '/img'));
-// app.use(express.static(publicRootDir + '/js'));
-// for babel compiled
-app.use(express.static(path.join(__dirname, '../dist/public')));
+app.use(express.static(publicRootDir + '/js'));
+// for webpack output
+app.use(express.static(publicBuildDir));
 
 // controllers
 require('./controllers/main-controller.js')(app);

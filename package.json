@@ -4,7 +4,8 @@
   "description": "The easiest and quickest way to create a resume online",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",

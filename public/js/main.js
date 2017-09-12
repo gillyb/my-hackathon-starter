@@ -4,4 +4,6 @@ const func = () => {
     console.log('hello world');
 };
 
-test.something();
+const t = new test();
+console.log(t);
+t.something();
