@@ -1,0 +1,32 @@
+{
+  "name": "ezresume",
+  "version": "1.0.0",
+  "description": "The easiest and quickest way to create a resume online",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gillyb/ezresume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gillyb/ezresume/issues"
+  },
+  "homepage": "https://github.com/gillyb/ezresume#readme",
+  "dependencies": {
+    "body-parser": "1.18.0",
+    "express": "4.15.4",
+    "pug": "2.0.0-rc.4",
+    "react": "15.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "webpack": "3.5.6"
+  }
+}

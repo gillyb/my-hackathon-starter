@@ -1,2 +1,2 @@
-# my-hackathon-starter
-A starter project I created to hit the ground running in the future
+# ezresume
+The easiest and quickest way to create a resume online
