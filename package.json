@@ -19,15 +19,23 @@
   "homepage": "https://github.com/gillyb/ezresume#readme",
   "dependencies": {
     "body-parser": "1.18.0",
+    "bootstrap": "4.0.0-beta",
     "express": "4.15.4",
     "pug": "2.0.0-rc.4",
     "react": "15.6.1"
   },
   "devDependencies": {
+    "autoprefixer": "7.1.4",
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-react": "6.24.1",
+    "css-loader": "0.28.7",
+    "extract-text-webpack-plugin": "2.1.2",
+    "node-sass": "4.5.3",
+    "postcss-loader": "2.0.6",
+    "precss": "2.0.0",
+    "sass-loader": "6.0.6",
     "webpack": "3.5.6"
   }
 }

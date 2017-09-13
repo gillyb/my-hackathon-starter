@@ -1,5 +1,9 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
+
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const extractScssPlugin = new ExtractTextPlugin('styles.bundle.css');
 
 module.exports = {
     entry: './public/js/main.js',
@@ -15,9 +19,33 @@ module.exports = {
                 query: {
                     presets: ['es2015', 'react']
                 }
+            },
+            {
+                test: /\.(scss)$/,
+                use: ExtractTextPlugin.extract([
+                    {
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'postcss-loader', // Run post css actions
+                        options: {
+                            plugins: function () { // post css plugins, can be exported to postcss.config.js
+                                return [
+                                    require('precss'),
+                                    require('autoprefixer')
+                                ];
+                            }
+                        }
+                    }, {
+                        loader: 'sass-loader' // compiles SASS to CSS
+                    }
+                ])
             }
         ]
     },
+    plugins: [
+        extractScssPlugin
+    ],
     stats: {
         colors: true
     },

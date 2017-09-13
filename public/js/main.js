@@ -1,3 +1,6 @@
+import './../../node_modules/bootstrap/scss/bootstrap.scss';
+import './../styles/main.scss';
+
 import test from './dependency';
 
 const func = () => {
